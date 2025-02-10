@@ -42,3 +42,11 @@ export interface Product {
 export const dataSource: Product[] = mock({
   "list|10-20": [productTemplate],
 }).list;
+
+const endpoint = process.env.NEXT_PUBLIC_EDNPOINT;
+
+export const loadProducts =  async () => {
+    const response = await fetch(endpoint + "/api/products");
+  const products: Product[] = await response.json();
+  return products;
+};

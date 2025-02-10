@@ -38,7 +38,7 @@ export default function RootLayout({
             <Link key={href} className='px-10 text-base font-semibold text-black-1' href={href}>{text}</Link>
           ))}
         </header>
-        <main className="px-16 py-20">
+        <main className="px-16 mt-16 py-4">
         {children}
         </main>
       </body>
