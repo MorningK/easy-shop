@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   changeAllSelected,
@@ -7,10 +7,10 @@ import {
   removeFromShoppingCart,
   selectCount,
   selectProductsWithSelected,
-} from "@/lib/features/product/slice";
-import { useAppDispatch, useAppSelector } from "@/lib/store";
-import Image from "next/image";
-import Price from "@/component/price";
+} from '@/lib/features/product/slice';
+import { useAppDispatch, useAppSelector } from '@/lib/store';
+import Image from 'next/image';
+import Price from '@/component/price';
 
 export default function ProductTable() {
   const dispatch = useAppDispatch();
@@ -21,7 +21,7 @@ export default function ProductTable() {
     <>
       <tbody>
         {products.map(({ id, name, price, image, selected, amount }) => (
-          <tr key={id} className="border-b ">
+          <tr key={id} className="border-b">
             <td className="flex items-center gap-2 py-2">
               <input
                 type="checkbox"
@@ -44,7 +44,7 @@ export default function ProductTable() {
                 alt={name}
               />
               <div className="flex flex-col items-start justify-between self-stretch">
-                <span className="font-bold text-lg">{name}</span>
+                <span className="text-lg font-bold">{name}</span>
                 <button
                   className="text-sm text-slate-400"
                   onClick={() => dispatch(removeFromShoppingCart(id))}
@@ -56,7 +56,7 @@ export default function ProductTable() {
             <td>
               <input
                 type="number"
-                className="border rounded py-1"
+                className="rounded border py-1"
                 value={amount}
                 onChange={(event) =>
                   dispatch(
@@ -77,7 +77,7 @@ export default function ProductTable() {
       </tbody>
       <tfoot className="sticky bottom-0 bg-white/80 backdrop-blur-xl">
         <tr className="border-b">
-          <td colSpan={3} className="py-2 flex gap-8">
+          <td colSpan={3} className="flex gap-8 py-2">
             <label className="flex gap-2">
               <input
                 type="checkbox"
@@ -95,11 +95,11 @@ export default function ProductTable() {
         <tr>
           <td
             colSpan={3}
-            className="flex justify-between px-8 py-2 items-center"
+            className="flex items-center justify-between px-8 py-2"
           >
             <span>登录注册查看更多优惠</span>
 
-            <button className="text-white bg-black rounded py-2 px-4">
+            <button className="rounded bg-black px-4 py-2 text-white">
               登录 | 注册
             </button>
           </td>

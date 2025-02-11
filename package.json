@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start",
+    "dev": "next dev --turbopack",
     "lint": "next lint",
-    "prepare": "husky"
+    "prepare": "husky",
+    "start": "next start"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.1",

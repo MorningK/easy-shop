@@ -1,12 +1,12 @@
-import { Product } from "@/lib/product";
-import Image from "next/image";
-import Price from "@/component/price";
-import AddShoppingCart from "./add-shopping-cart";
+import { Product } from '@/lib/product';
+import Image from 'next/image';
+import Price from '@/component/price';
+import AddShoppingCart from './add-shopping-cart';
 
 export default function ProductCard({ product }: { product: Product }) {
   const { name, description, price, sales, image } = product;
   return (
-    <figure className="flex flex-col items-start bg-slate-100 px-8 py-4 rounded-xl w-[264px] h-[444px] gap-4">
+    <figure className="flex h-[444px] w-[264px] flex-col items-start gap-4 rounded-xl bg-slate-100 px-8 py-4">
       <Image
         className="rounded-md"
         src={image}
@@ -14,8 +14,8 @@ export default function ProductCard({ product }: { product: Product }) {
         height={200}
         alt={name}
       />
-      <div className="font-bold text-lg">{name}</div>
-      <div className="text-sm overflow-hidden text-ellipsis text-nowrap w-50">
+      <div className="text-lg font-bold">{name}</div>
+      <div className="w-50 overflow-hidden text-ellipsis text-nowrap text-sm">
         {description}
       </div>
       <div className="text-sm">{sales}人评价</div>

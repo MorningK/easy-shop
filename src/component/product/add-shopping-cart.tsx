@@ -1,19 +1,19 @@
-"use client";
+'use client';
 
-import { Product } from "@/lib/product";
-import { addToShoppingCart } from "@/lib/features/product/slice";
-import { useAppDispatch } from "@/lib/store";
+import { Product } from '@/lib/product';
+import { addToShoppingCart } from '@/lib/features/product/slice';
+import { useAppDispatch } from '@/lib/store';
 
 export default function AddShoppingCart({ product }: { product: Product }) {
   const dispatch = useAppDispatch();
   const handleClick = () => {
-    console.debug("add", product);
+    console.debug('add', product);
     dispatch(addToShoppingCart(product));
   };
 
   return (
     <button
-      className="w-full rounded bg-blue-500 text-white py-2"
+      className="w-full rounded bg-blue-500 py-2 text-white"
       onClick={handleClick}
     >
       加入购物车

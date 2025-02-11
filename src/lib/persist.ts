@@ -8,18 +8,18 @@ import {
   PURGE,
   REGISTER,
   REHYDRATE,
-} from "redux-persist";
-import localforage from "localforage";
+} from 'redux-persist';
+import localforage from 'localforage';
 
-import { rootReducer } from "./store"; // 你的 Redux reducers
-import { configureStore, Store } from "@reduxjs/toolkit";
+import { rootReducer } from './store';
+import { configureStore, Store } from '@reduxjs/toolkit';
 
 // 配置 localForage
 localforage.config({
   driver: localforage.INDEXEDDB,
-  name: "shop",
+  name: 'shop',
   version: 1.0,
-  storeName: "shop",
+  storeName: 'shop',
 });
 
 // 创建一个适配器
@@ -37,7 +37,7 @@ const localForageAdapter: WebStorage = {
 
 // 配置 redux-persist
 const persistConfig = {
-  key: "root",
+  key: 'root',
   storage: localForageAdapter,
 };
 

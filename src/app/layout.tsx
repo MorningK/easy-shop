@@ -1,26 +1,26 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Link from "next/link";
-import StoreProvider from "@/component/store-provider";
+import { Geist, Geist_Mono } from 'next/font/google';
+import './globals.css';
+import Link from 'next/link';
+import StoreProvider from '@/component/store-provider';
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
 });
 
 const links = [
   {
-    href: "/",
-    text: "首页",
+    href: '/',
+    text: '首页',
   },
   {
-    href: "/shopping-cart",
-    text: "购物车",
+    href: '/shopping-cart',
+    text: '购物车',
   },
 ];
 
@@ -35,18 +35,18 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <StoreProvider>
-          <header className="fixed top-0 z-10 flex h-16 w-full flex-wrap items-center overflow-hidden bg-white/80  backdrop-blur-xl">
+          <header className="fixed top-0 z-10 flex h-16 w-full flex-wrap items-center overflow-hidden bg-white/80 backdrop-blur-xl">
             {links.map(({ href, text }) => (
               <Link
                 key={href}
-                className="px-10 text-base font-semibold text-black-1"
+                className="text-black-1 px-10 text-base font-semibold"
                 href={href}
               >
                 {text}
               </Link>
             ))}
           </header>
-          <main className="px-16 mt-16 py-4">{children}</main>
+          <main className="mt-16 px-16 py-4">{children}</main>
         </StoreProvider>
       </body>
     </html>

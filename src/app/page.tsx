@@ -1,15 +1,15 @@
-import { loadProducts, Product } from "@/lib/product";
-import ProductCard from "@/component/product/product-card";
+import { loadProducts, Product } from '@/lib/product';
+import ProductCard from '@/component/product/product-card';
 
 export const metadata = {
-  title: "首页",
+  title: '首页',
 };
 
 export default async function Home() {
   const products: Product[] = await loadProducts();
 
   return (
-    <div className="flex gap-8 items-center flex-wrap">
+    <div className="flex flex-wrap items-center gap-8">
       {products.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}

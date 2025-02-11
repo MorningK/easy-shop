@@ -1,10 +1,10 @@
-import type { PayloadAction } from "@reduxjs/toolkit";
+import type { PayloadAction } from '@reduxjs/toolkit';
 import {
   asyncThunkCreator,
   buildCreateSlice,
   createSelector,
-} from "@reduxjs/toolkit";
-import { Product } from "../../product";
+} from '@reduxjs/toolkit';
+import { Product } from '../../product';
 
 interface ProductWithAmount extends Product {
   amount: number;
@@ -25,7 +25,7 @@ const createAppSlice = buildCreateSlice({
 });
 
 export const productSlice = createAppSlice({
-  name: "product",
+  name: 'product',
   initialState,
   reducers: (create) => ({
     addToShoppingCart: create.reducer(
@@ -66,7 +66,7 @@ export const productSlice = createAppSlice({
         if (current) {
           current.amount = amount;
         } else {
-          throw new Error("product not found:" + id);
+          throw new Error('product not found:' + id);
         }
       },
     ),

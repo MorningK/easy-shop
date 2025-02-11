@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { makePersistor, makeStore } from "@/lib/persist";
-import { AppStore } from "@/lib/store";
-import { setupListeners } from "@reduxjs/toolkit/query";
-import { PropsWithChildren, useEffect, useRef } from "react";
-import { Provider } from "react-redux";
-import { Persistor } from "redux-persist";
-import { PersistGate } from "redux-persist/integration/react";
+import { makePersistor, makeStore } from '@/lib/persist';
+import { AppStore } from '@/lib/store';
+import { setupListeners } from '@reduxjs/toolkit/query';
+import { PropsWithChildren, useEffect, useRef } from 'react';
+import { Provider } from 'react-redux';
+import { Persistor } from 'redux-persist';
+import { PersistGate } from 'redux-persist/integration/react';
 
 export default function StoreProvider({ children }: PropsWithChildren) {
   const storeRef = useRef<AppStore | null>(null);
