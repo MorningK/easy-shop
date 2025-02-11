@@ -56,6 +56,39 @@ yarn start
 9. `husky` `lint-staged` 对提交的代码进行自动化的处理和检查
 10. `tailwindcss` `postcss` 提供原子化和语义化的样式
 
+## 项目结构
+
+```
+src
+├── app
+│   ├── api
+│   │   └── products
+│   │       └── route.ts                    获取产品列表的远程接口
+│   ├── favicon.ico
+│   ├── globals.css                         配置全局样式，主要包括了tailwind的配置
+│   ├── layout.tsx                          整个应用的基本布局，添加了顶部的导航栏，还配置了redux的provider和persist gate
+│   ├── page.tsx                            应用的首页，展示所有的产品列表
+│   └── shopping-cart
+│       └── page.tsx                        购物车页面，包括了所有加入购物车的产品，并可以进行对应的管理
+├── component
+│   ├── price.tsx                           用于统一展示价格的组件
+│   ├── product
+│   │   ├── add-shopping-cart.tsx           首页中点击加入购物车的按钮组件
+│   │   └── product-card.tsx                首页中单个产品的卡片组件
+│   ├── shopping-cart
+│   │   ├── product-table.tsx               购物车中所有产品的表格
+│   │   ├── setllement-price.tsx            展示计算优惠后结算价格的组件
+│   │   └── total-price.tsx                 展示初始价格的组件
+│   └── store-provider.tsx                  配置redux的store和persist的组件
+└── lib
+    ├── features
+    │   └── product
+    │       └── slice.ts                    处理购物车中产品的状态
+    ├── persist.ts                          定义了redux-persist的store和persistor
+    ├── product.ts                          定义了产品拥有的字段，并按照类型创建模拟数据
+    └── store.ts                            定义了redux中的reducer、store以及声明了具体类型的hooks
+```
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
