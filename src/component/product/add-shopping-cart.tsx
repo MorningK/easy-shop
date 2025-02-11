@@ -3,12 +3,14 @@
 import { Product } from '@/lib/product';
 import { addToShoppingCart } from '@/lib/features/product/slice';
 import { useAppDispatch } from '@/lib/store';
+import { toast } from 'sonner';
 
 export default function AddShoppingCart({ product }: { product: Product }) {
   const dispatch = useAppDispatch();
   const handleClick = () => {
     console.debug('add', product);
     dispatch(addToShoppingCart(product));
+    toast('添加成功');
   };
 
   return (

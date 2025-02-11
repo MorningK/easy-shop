@@ -49,11 +49,12 @@ yarn start
 2. `next` 使用了nextjs app router作为项目的主要框架
 3. `@reduxjs/toolkit` `react-redux` 使用redux作为状态管理工具
 4. `redux-persist` `localforage` 实现使用IndexedDB作为缓存数据持久化
-5. `mockjs` 为api返回模拟数据提供帮助
-6. `typescript` `@types/*` 这是一个使用typescript编写的应用
-7. `eslint` `prettier` 对代码进行规范化的校验
-8. `husky` `lint-staged` 对提交的代码进行自动化的处理和检查
-9. `tailwindcss` `postcss` 提供原子化和语义化的样式
+5. `sonner` 轻提示组件
+6. `mockjs` 为api返回模拟数据提供帮助
+7. `typescript` `@types/*` 这是一个使用typescript编写的应用
+8. `eslint` `prettier` 对代码进行规范化的校验
+9. `husky` `lint-staged` 对提交的代码进行自动化的处理和检查
+10. `tailwindcss` `postcss` 提供原子化和语义化的样式
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 

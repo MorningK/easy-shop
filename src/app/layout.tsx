@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import Link from 'next/link';
 import StoreProvider from '@/component/store-provider';
+import { Toaster } from 'sonner';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -47,6 +48,7 @@ export default function RootLayout({
             ))}
           </header>
           <main className="mt-16 px-16 py-4">{children}</main>
+          <Toaster />
         </StoreProvider>
       </body>
     </html>
