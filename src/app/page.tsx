@@ -1,5 +1,5 @@
 import { loadProducts, Product } from "@/lib/product";
-import ProductCard from "@/component/product-card";
+import ProductCard from "@/component/product/product-card";
 
 export const metadata = {
   title: "首页",

@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import StoreProvider from "@/component/store-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,18 +34,20 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="fixed top-0 z-10 flex h-16 w-full flex-wrap items-center overflow-hidden bg-white/80  backdrop-blur-xl">
-          {links.map(({ href, text }) => (
-            <Link
-              key={href}
-              className="px-10 text-base font-semibold text-black-1"
-              href={href}
-            >
-              {text}
-            </Link>
-          ))}
-        </header>
-        <main className="px-16 mt-16 py-4">{children}</main>
+        <StoreProvider>
+          <header className="fixed top-0 z-10 flex h-16 w-full flex-wrap items-center overflow-hidden bg-white/80  backdrop-blur-xl">
+            {links.map(({ href, text }) => (
+              <Link
+                key={href}
+                className="px-10 text-base font-semibold text-black-1"
+                href={href}
+              >
+                {text}
+              </Link>
+            ))}
+          </header>
+          <main className="px-16 mt-16 py-4">{children}</main>
+        </StoreProvider>
       </body>
     </html>
   );

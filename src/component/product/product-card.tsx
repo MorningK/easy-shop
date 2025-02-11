@@ -1,6 +1,7 @@
 import { Product } from "@/lib/product";
 import Image from "next/image";
-import Price from "./price";
+import Price from "@/component/price";
+import AddShoppingCart from "./add-shopping-cart";
 
 export default function ProductCard({ product }: { product: Product }) {
   const { name, description, price, sales, image } = product;
@@ -19,9 +20,7 @@ export default function ProductCard({ product }: { product: Product }) {
       </div>
       <div className="text-sm">{sales}人评价</div>
       <Price price={price} className="text-red-600" />
-      <button className="w-full rounded bg-blue-500 text-white py-2">
-        加入购物车
-      </button>
+      <AddShoppingCart product={product} />
     </figure>
   );
 }
