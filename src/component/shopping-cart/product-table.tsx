@@ -7,7 +7,7 @@ import {
   removeFromShoppingCart,
   selectCount,
   selectProductsWithSelected,
-} from "@/lib/slice";
+} from "@/lib/features/product/slice";
 import { useAppDispatch, useAppSelector } from "@/lib/store";
 import Image from "next/image";
 import Price from "@/component/price";

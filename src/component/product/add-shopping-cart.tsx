@@ -1,7 +1,7 @@
 "use client";
 
 import { Product } from "@/lib/product";
-import { addToShoppingCart } from "@/lib/slice";
+import { addToShoppingCart } from "@/lib/features/product/slice";
 import { useAppDispatch } from "@/lib/store";
 
 export default function AddShoppingCart({ product }: { product: Product }) {

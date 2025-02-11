@@ -4,7 +4,7 @@ import {
   buildCreateSlice,
   createSelector,
 } from "@reduxjs/toolkit";
-import { Product } from "./product";
+import { Product } from "../../product";
 
 interface ProductWithAmount extends Product {
   amount: number;
