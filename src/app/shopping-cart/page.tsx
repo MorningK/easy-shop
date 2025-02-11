@@ -70,21 +70,21 @@ export default async function Page() {
       <div className="sticky top-20 bg-gray-100 rounded-md p-4 min-w-[300px] flex flex-col gap-4">
         <div className="pb-4 font-bold border-b border-slate-800">结算详情</div>
         <div className="flex justify-between items-center">
-            <span className="font-bold">小计</span>
-            <Price price={10000} />
+          <span className="font-bold">小计</span>
+          <Price price={10000} />
         </div>
-        <div className="font-bold">
-            优惠券
-        </div>
+        <div className="font-bold">优惠券</div>
         <div className="flex pb-4 border-b border-slate-400">
-            <input className="round-sm" placeholder="请输入优惠码" />
-            <button className="px-4 py-1 text-white bg-black">提交</button>
+          <input className="round-sm" placeholder="请输入优惠码" />
+          <button className="px-4 py-1 text-white bg-black">提交</button>
         </div>
         <div className="flex justify-between items-center">
-            <span className="font-bold">合计（含税）</span>
-            <Price price={10000} className='text-red-600 font-bold' />
+          <span className="font-bold">合计（含税）</span>
+          <Price price={10000} className="text-red-600 font-bold" />
         </div>
-        <button className="w-full py-2 bg-black text-white rounded mt-8">结算</button>
+        <button className="w-full py-2 bg-black text-white rounded mt-8">
+          结算
+        </button>
       </div>
     </div>
   );
